@@ -1,0 +1,63 @@
+{
+  "_comment": "Copy to sources.json (gitignored) and fill in. Everything specific to your company lives here.",
+
+  "team": {
+    "internal_domains": ["example.com"],
+    "hosts": ["ae@example.com", "founder@example.com"],
+    "recipients": ["ae@example.com", "founder@example.com"],
+    "timezone": "America/New_York"
+  },
+
+  "meetings": {
+    "booking_title_patterns": ["book a meeting with", "book a demo", "intro w/"],
+    "drop_title_patterns": ["lunch", "reminder", "internal", "1:1"]
+  },
+
+  "sources": [
+    {
+      "id": "sdr_vendor",
+      "label": "Outsourced SDR",
+      "precedence": 1,
+      "owns_account": true,
+      "organizer_addresses": ["sdr@vendor.example"],
+      "vendor_domains": ["vendor.example"],
+      "how_to_check": "Search the vendor's replies ledger by surname stem AND company. Quote the prospect's own words with the date. Pull every other row at the same company for account context."
+    },
+    {
+      "id": "outbound_campaign",
+      "label": "Outbound campaign reply",
+      "precedence": 2,
+      "how_to_check": "Look the email up in your sequencing tool; if no hit, search contacts by surname. List every campaign they are in with first and last contacted dates."
+    },
+    {
+      "id": "signal_tool",
+      "label": "Intent / signal tool",
+      "precedence": 3,
+      "how_to_check": "Match on name or LinkedIn URL in the signal tool's export. Report the signal, its score and the date."
+    },
+    {
+      "id": "event_or_referral",
+      "label": "Event or referral",
+      "precedence": 4,
+      "how_to_check": "Search the event attendee lists and the inbox for the name and company domain, last 120 days."
+    },
+    {
+      "id": "website_form",
+      "label": "Website inbound",
+      "precedence": 5,
+      "fallback_only": true,
+      "how_to_check": "Check the form backend only if the meeting came through the booking link and nothing above matched."
+    }
+  ],
+
+  "outreach": {
+    "allowed_primary_sources": ["website_form", "event_or_referral", "unknown"],
+    "_comment": "A personal follow-up (connection request, note) only goes out when the primary source is one of these and no source owns the account."
+  },
+
+  "limits": {
+    "enrichment_credits_per_run": 10,
+    "dedupe_days": 2,
+    "reenrich_after_days": 30
+  }
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Priya Hanssen-Ross",
+    "company": "Northwind Logistics",
+    "organizer": "sdr@vendor.example",
+    "hits": [
+      {"source": "sdr_vendor", "date": "2026-09-30", "detail": "Replied: 'Busy until quarter end, then happy to look.'"},
+      {"source": "outbound_campaign", "date": "2026-10-16", "detail": "In our own email sequence, paused"}
+    ]
+  },
+  {
+    "name": "Tom Marcetti",
+    "company": "between roles",
+    "via_booking_link": true,
+    "hits": [
+      {"source": "website_form", "date": "2026-10-20", "detail": "Booked on a personal address"},
+      {"source": "sdr_vendor", "date": "2026-10-19", "detail": "Replied: 'Between gigs, would love a demo for my next stop.'"}
+    ]
+  },
+  {
+    "name": "Ana Okafor",
+    "company": "Fabrikam Health",
+    "via_booking_link": true,
+    "hits": [
+      {"source": "website_form", "date": "2026-10-27", "detail": "Demo form, work email"},
+      {"source": "event_or_referral", "date": "2026-10-14", "detail": "Badge scan at a RevOps meetup"}
+    ]
+  },
+  {
+    "name": "Jonas Weber",
+    "company": "Contoso Retail",
+    "via_booking_link": true,
+    "hits": []
+  }
+]

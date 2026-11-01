@@ -1,0 +1,10 @@
+# Your config, ledgers and sent briefs. Stays private.
+/sources.json
+/ledgers/
+/briefs/
+/events.json
+/hits.json
+
+__pycache__/
+*.py[cod]
+.DS_Store
